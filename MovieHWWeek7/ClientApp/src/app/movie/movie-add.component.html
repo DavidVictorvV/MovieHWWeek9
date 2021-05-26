@@ -1,7 +1,41 @@
 <h1 id="tableLabel">Add movie</h1>
 
-Name:        <input [(ngModel)]="movie.movieName" /><br/>
-Genre:       <input [(ngModel)]="movie.genre" /><br />
-Length:       <input [(ngModel)]="movie.movieLength" /><br />
-Release date:<input  type="date" [(ngModel)]="movie.releaseDate" /><br />
-<button class="btn btn-primary" (click)="saveMovie()">Save Movie</button>
+
+<table class="example-full-width" cellspacing="0">
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width">
+        <mat-label>Movie Name</mat-label>
+        <input matInput [(ngModel)]="movie.movieName" />
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width">
+        <mat-label>Genre</mat-label>
+        <input matInput [(ngModel)]="movie.genre" />
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width">
+        <mat-label>Movie Length</mat-label>
+        <input matInput type="number" [(ngModel)]="movie.movieLength" />
+      </mat-form-field>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <mat-form-field class="example-full-width">
+        <mat-label>Release Date</mat-label>
+        <input matInput type="datetime-local" [(ngModel)]="movie.releaseDate" />
+      </mat-form-field>
+    </td>
+  </tr>
+</table>
+
+<div class="example-button-row">
+  <button mat-raised-button color="accent" (click)="saveMovie()">Save Movie</button>
+</div>
